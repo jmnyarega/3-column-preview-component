@@ -1,0 +1,137 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-bg: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --transparent-btn-bg: hsla(0, 0%, 100%, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 0.9375rem;
+  font-family: "Lexend", sans-serif;
+  max-width: 1400px;
+  width: 85%;
+  margin: 12% auto;
+  background-color: var(--very-light-gray);
+}
+
+a,
+a:visited,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: none;
+}
+
+p,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 3.2rem 3rem;
+}
+
+.card--sedans {
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--bright-orange);
+}
+
+.card--suvs {
+  background-color: var(--dark-cyan);
+}
+
+.card--luxury {
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: var(--very-dark-cyan);
+}
+
+.title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+
+  padding: 1.5rem 0;
+}
+
+.description {
+  color: var(--transparent-bg);
+  line-height: 1.6;
+  font-weight: 900;
+  max-width: 30ch;
+  padding-bottom: 1.5rem;
+}
+
+.button {
+  background-color: var(--very-light-gray);
+  border-radius: 99rem;
+  border: 2px solid var(--very-light-gray);
+  padding: 0.7rem 1.5rem;
+  font-weight: 900;
+}
+
+.button--sedans {
+  color: var(--bright-orange);
+}
+
+.button--sedans:hover {
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray);
+}
+
+.button--suvs {
+  color: var(--dark-cyan);
+}
+
+.button--suvs:hover {
+  background-color: var(--dark-cyan);
+  color: var(--very-light-gray);
+}
+
+.button--luxury {
+  color: var(--very-dark-cyan);
+}
+
+.button--luxury:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+  }
+
+  .card--sedans {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .card--luxury {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .button {
+    align-self: flex-start;
+  }
+}
